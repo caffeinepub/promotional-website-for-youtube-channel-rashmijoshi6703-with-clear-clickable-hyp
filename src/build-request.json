@@ -1,0 +1,134 @@
+{
+  "kind": "build_request",
+  "title": "Promotional website for YouTube channel @rashmijoshi6703 with clear clickable hyperlinks",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive, single-page promotional website for the YouTube channel handle @rashmijoshi6703, with clear calls-to-action and prominent clickable hyperlinks to the channel.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "@rashmijoshi6703 this is my you tube channel.. Please create beautiful website ..so it will also help my channel grow faster.. Make it highly skilled and workable click able hyperlink."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page renders without errors and is responsive across mobile/tablet/desktop.",
+        "The page includes a prominent primary CTA button linking to https://www.youtube.com/@rashmijoshi6703.",
+        "All external links are clearly styled as interactive, keyboard-focusable, and open in a new tab with safe rel attributes (noopener/noreferrer)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add content sections suitable for a YouTube channel promo site: Hero (channel name/handle + subscribe CTA), About, Featured content (a grid of video/playlist link cards), and Contact/Links section (additional hyperlinks the owner can add).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Please create beautiful website ..so it will also help my channel grow faster.."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Sections are present and navigable via in-page anchor links (e.g., #about, #featured, #links).",
+        "Featured content is represented as a list of cards that link out (URLs stored in a simple editable data structure in the frontend).",
+        "All links are clickable, visually consistent, and have hover/focus states."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement a coherent, creative visual theme and apply it consistently across typography, spacing, components, and backgrounds (avoid default/plain styling).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Please create beautiful website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Theme is consistent across all sections (colors, type scale, button styles, card styles).",
+        "Theme is NOT primarily blue/purple.",
+        "Page looks polished: aligned layout grid, consistent spacing, and clear hierarchy."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add basic on-page SEO and shareability enhancements: meaningful page title, meta description, and an attractive hero headline/subheadline (English).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "so it will also help my channel grow faster"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Document title includes the channel handle/name and indicates it is an official channel site.",
+        "Meta description is present and written in English.",
+        "Hero heading/subheading are present in English and clearly describe the channel."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add a site header with navigation links (in-page anchors) and a sticky or easily accessible “Subscribe” CTA that links to https://www.youtube.com/@rashmijoshi6703.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Make it highly skilled and workable click able hyperlink."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header navigation links scroll to the correct sections.",
+        "Subscribe CTA is present and usable on both desktop and mobile.",
+        "All navigation and CTAs are accessible via keyboard (tab/enter/space)."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add generated static image assets (hero/banner and a channel avatar placeholder) and render them in the UI from frontend/public/assets/generated (do not serve images from the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Please create beautiful website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced by the UI.",
+        "Hero/banner image is visible in the hero section without layout shift.",
+        "Images include appropriate alt text in English."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text.",
+    "Do not modify any frontend paths listed as immutable in SYSTEM_CONTEXT (compose existing UI components instead).",
+    "Do not add third-party auth providers; only Internet Identity is allowed (and only if needed—no auth required for this landing site).",
+    "Keep backend as single-actor Motoko; do not introduce additional backend services."
+  ],
+  "nonGoals": [
+    "Integrating with the YouTube Data API to auto-fetch latest videos/playlists.",
+    "Building a full CMS/admin panel for managing content.",
+    "Real-time chat, push notifications, or email service integrations."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Wide hero banner background with abstract creator-themed shapes, warm sunset palette (hero-banner.dim_1920x800.png)",
+      "Clean circular avatar placeholder illustration, warm neutral palette (channel-avatar.dim_512x512.png)",
+      "Small set of minimal social/link icons in a consistent outline style (social-icons-set.dim_256x256.png)"
+    ],
+    "edits": []
+  }
+}

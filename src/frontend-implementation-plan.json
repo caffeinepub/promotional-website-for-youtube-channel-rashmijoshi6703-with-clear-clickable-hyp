@@ -1,0 +1,173 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Single-page promo site for YouTube channel @rashmijoshi6703",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive single-page landing experience with prominent CTA links to the YouTube channel.",
+      "acceptanceCriteria": [
+        "Landing page renders without errors and is responsive across mobile/tablet/desktop.",
+        "The page includes a prominent primary CTA button linking to https://www.youtube.com/@rashmijoshi6703.",
+        "All external links are clearly styled as interactive, keyboard-focusable, and open in a new tab with safe rel attributes (noopener/noreferrer)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page layout implementing the primary YouTube channel CTA (https://www.youtube.com/@rashmijoshi6703) with accessible external-link behavior (target=_blank + rel=noopener noreferrer) and responsive structure. Use shadcn-ui components (e.g., Button/Card) to provide polished CTAs and interactive styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ExternalLink.tsx",
+          "operation": "create",
+          "description": "Create a small reusable ExternalLink component that standardizes safe external linking (noopener/noreferrer), keyboard focusability, and consistent hover/focus styles across the page. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add baseline global styles to ensure links and focus rings are clearly visible and consistent, and to support responsive spacing/typography without default/plain styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add Hero, About, Featured content card grid, and Contact/Links sections with in-page anchor navigation and editable link data.",
+      "acceptanceCriteria": [
+        "Sections are present and navigable via in-page anchor links (e.g., #about, #featured, #links).",
+        "Featured content is represented as a list of cards that link out (URLs stored in a simple editable data structure in the frontend).",
+        "All links are clickable, visually consistent, and have hover/focus states."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/channelContent.ts",
+          "operation": "create",
+          "description": "Create a simple editable frontend data structure containing featured video/playlist links and additional contact/links to render on the page (no YouTube API integration)."
+        },
+        {
+          "path": "frontend/src/components/FeaturedGrid.tsx",
+          "operation": "create",
+          "description": "Create a Featured content section component that renders a responsive grid of link cards from the editable data structure. Use shadcn-ui Card (and related primitives) to provide consistent card layout and interaction states; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "create",
+          "description": "Create a header that includes in-page anchor navigation items for #about, #featured, and #links and works for both desktop and mobile. Use shadcn-ui navigation-related components (e.g., DropdownMenu/Sheet if available) for an accessible mobile menu; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the Hero, About, FeaturedGrid, and Contact/Links sections into the single page with correct section ids (#about, #featured, #links) and ensure all section links use the shared ExternalLink styling/behavior. Use shadcn-ui layout primitives where appropriate for consistent spacing; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement a warm, creative, non-blue/purple visual theme applied consistently across the entire page.",
+      "acceptanceCriteria": [
+        "Theme is consistent across all sections (colors, type scale, button styles, card styles).",
+        "Theme is NOT primarily blue/purple.",
+        "Page looks polished: aligned layout grid, consistent spacing, and clear hierarchy."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define a cohesive warm sunset-inspired theme using CSS variables compatible with shadcn-ui/Tailwind (e.g., warm neutrals, coral/orange accents) and apply consistent typography scale, spacing, background treatments, and focus styles across the app (avoid primarily blue/purple)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme (as needed) to support the creative warm palette and consistent typography/spacing utilities used throughout the page (ensuring the theme is not primarily blue/purple)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the theme consistently across hero, cards, buttons, and section backgrounds using the shared design tokens and shadcn-ui components for uniform styling; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add basic on-page SEO/shareability enhancements (title, meta description, and English hero copy).",
+      "acceptanceCriteria": [
+        "Document title includes the channel handle/name and indicates it is an official channel site.",
+        "Meta description is present and written in English.",
+        "Hero heading/subheading are present in English and clearly describe the channel."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the document title to include @rashmijoshi6703 and indicate it is an official channel site; add an English meta description suitable for sharing/SEO."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Ensure the hero headline/subheadline are present in English and clearly describe the channel, aligning with the updated title/meta description."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add a sticky/easily accessible header navigation with a persistent Subscribe CTA linking to the YouTube channel.",
+      "acceptanceCriteria": [
+        "Header navigation links scroll to the correct sections.",
+        "Subscribe CTA is present and usable on both desktop and mobile.",
+        "All navigation and CTAs are accessible via keyboard (tab/enter/space)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Implement sticky/easily accessible header behavior with in-page anchor links and a persistent Subscribe CTA linking to https://www.youtube.com/@rashmijoshi6703, ensuring full keyboard accessibility and clear focus states. Use shadcn-ui Button (and mobile menu primitives if used) for accessible interactions; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the SiteHeader into the page layout and ensure anchor navigation scrolls to the correct section ids (#about, #featured, #links) without breaking responsiveness."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add and render generated static image assets from frontend/public/assets/generated with proper layout stability and alt text.",
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced by the UI.",
+        "Hero/banner image is visible in the hero section without layout shift.",
+        "Images include appropriate alt text in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-banner.dim_1920x800.png",
+          "operation": "create",
+          "description": "Add the generated wide hero banner background image asset (static file) at this exact path for use in the hero section."
+        },
+        {
+          "path": "frontend/public/assets/generated/channel-avatar.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated circular avatar placeholder image asset (static file) at this exact path for use in the hero/header area."
+        },
+        {
+          "path": "frontend/public/assets/generated/social-icons-set.dim_256x256.png",
+          "operation": "create",
+          "description": "Add the generated social/link icons set image asset (static file) at this exact path for use in the Links/Contact section."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Reference and render frontend/public/assets/generated/hero-banner.dim_1920x800.png and frontend/public/assets/generated/channel-avatar.dim_512x512.png in the hero with explicit sizing to prevent layout shift, and provide English alt text."
+        },
+        {
+          "path": "frontend/src/components/SocialLinks.tsx",
+          "operation": "create",
+          "description": "Create a Links/Contact section helper that renders additional hyperlinks and uses frontend/public/assets/generated/social-icons-set.dim_256x256.png for consistent iconography, with accessible alt text and focus states. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire SocialLinks into the #links section and ensure all hyperlinks are styled consistently and use the shared ExternalLink behavior."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no backend logic.",
+  "feature_evidence.json": "Feature evidence report mapping features to related files, components, tests, and confidence levels.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose of key frontend components and configuration files.",
+  "frontend/index.css": "Tailwind-based global stylesheet defining a warm color theme, dark mode variables, and base layout styles.",
+  "frontend/index.html": "HTML entry point containing SEO metadata, Open Graph tags, and root mounting element.",
+  "frontend/src/App.tsx": "Main React page assembling hero, about, featured content, social links, and navigation sections.",
+  "frontend/src/components/ExternalLink.tsx": "Reusable external link wrapper adding safe link attributes and optional icon.",
+  "frontend/src/components/FeaturedGrid.tsx": "Grid component that displays featured video and playlist cards using provided content data.",
+  "frontend/src/components/SiteHeader.tsx": "Sticky responsive header with navigation links and YouTube subscribe CTA for desktop and mobile.",
+  "frontend/src/components/SocialLinks.tsx": "Renders social link buttons with icons using the socialLinks content list.",
+  "frontend/src/content/channelContent.ts": "TypeScript data definitions and arrays for featured content items and social links.",
+  "frontend/src/hooks/useActor.ts": "Creates and caches a backend actor based on the current Internet Identity and refreshes dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides context and hooks for managing Internet Identity authentication, including login, logout, and persisted identity loading.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder module exporting nothing because backend has no query methods.",
+  "frontend/src/index.css": "Defines Tailwind base styles and warm-themed light/dark design tokens and global UI behavior.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and Internet Identity context providers.",
+  "frontend/tailwind.config.js": "Configures Tailwind, theme extensions, custom colors bound to CSS variables, fonts, and plugins.",
+  "project_state.json": "Stores project metadata, requirements, features, and image needs for the website build."
+}
