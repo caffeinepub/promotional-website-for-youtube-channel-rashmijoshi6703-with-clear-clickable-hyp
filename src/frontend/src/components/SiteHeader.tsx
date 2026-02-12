@@ -11,6 +11,7 @@ export function SiteHeader() {
   const navItems = [
     { label: 'About', href: '#about' },
     { label: 'Featured', href: '#featured' },
+    { label: 'Shorts', href: '#shorts' },
     { label: 'Connect', href: '#links' },
   ];
 

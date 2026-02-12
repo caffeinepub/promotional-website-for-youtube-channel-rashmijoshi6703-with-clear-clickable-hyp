@@ -14,6 +14,13 @@ export interface SocialLink {
   description?: string;
 }
 
+export interface ShortsItem {
+  id: string;
+  title: string;
+  url: string;
+  views: string;
+}
+
 export const featuredContent: FeaturedContent[] = [
   {
     id: '1',
@@ -101,5 +108,38 @@ export const socialLinks: SocialLink[] = [
     label: 'Email',
     url: 'mailto:contact@example.com',
     description: 'Get in touch',
+  },
+];
+
+export const topShorts: ShortsItem[] = [
+  {
+    id: '1',
+    title: 'Most Viewed Short #1',
+    url: 'https://www.youtube.com/@rashmijoshi6703/shorts',
+    views: '1.2M views',
+  },
+  {
+    id: '2',
+    title: 'Most Viewed Short #2',
+    url: 'https://www.youtube.com/@rashmijoshi6703/shorts',
+    views: '950K views',
+  },
+  {
+    id: '3',
+    title: 'Most Viewed Short #3',
+    url: 'https://www.youtube.com/@rashmijoshi6703/shorts',
+    views: '780K views',
+  },
+  {
+    id: '4',
+    title: 'Most Viewed Short #4',
+    url: 'https://www.youtube.com/@rashmijoshi6703/shorts',
+    views: '650K views',
+  },
+  {
+    id: '5',
+    title: 'Most Viewed Short #5',
+    url: 'https://www.youtube.com/@rashmijoshi6703/shorts',
+    views: '520K views',
   },
 ];

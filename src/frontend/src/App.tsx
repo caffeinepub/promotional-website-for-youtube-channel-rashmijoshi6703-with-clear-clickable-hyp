@@ -1,5 +1,6 @@
 import { SiteHeader } from './components/SiteHeader';
 import { FeaturedGrid } from './components/FeaturedGrid';
+import { TopShortsGrid } from './components/TopShortsGrid';
 import { SocialLinks } from './components/SocialLinks';
 import { ExternalLink } from './components/ExternalLink';
 import { Button } from './components/ui/button';
@@ -99,8 +100,23 @@ function App() {
         </div>
       </section>
 
+      {/* Top 5 Most-Viewed Shorts Section */}
+      <section id="shorts" className="py-20 md:py-28 bg-accent/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Top 5 Most-Viewed Shorts
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Quick, engaging content that our community loves the most
+            </p>
+          </div>
+          <TopShortsGrid />
+        </div>
+      </section>
+
       {/* Links Section */}
-      <section id="links" className="py-20 md:py-28 bg-accent/30">
+      <section id="links" className="py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

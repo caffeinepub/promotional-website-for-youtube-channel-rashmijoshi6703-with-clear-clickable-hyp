@@ -1,12 +1,13 @@
 {
-  "frontend/src/App.tsx": "Main application component featuring a single-page promotional website with hero section, about, featured content grid, social links, and footer with proper anchor navigation and external YouTube channel links.",
-  "frontend/src/components/SiteHeader.tsx": "Sticky header component with responsive navigation (desktop and mobile menu using Sheet), smooth scroll anchor links, and persistent Subscribe CTA button linking to the YouTube channel.",
+  "frontend/src/App.tsx": "Main application component featuring a single-page promotional website with hero, about, featured content, top 5 Shorts section, social links, and footer with proper anchor navigation.",
+  "frontend/src/components/SiteHeader.tsx": "Sticky header component with responsive navigation including the new \"Shorts\" anchor link for desktop and mobile menu, smooth scroll behavior, and persistent Subscribe CTA button.",
   "frontend/src/components/ExternalLink.tsx": "Reusable component that wraps external links with safe attributes (target=\"_blank\", rel=\"noopener noreferrer\"), keyboard accessibility, and consistent focus states.",
   "frontend/src/components/FeaturedGrid.tsx": "Responsive grid component displaying featured video and playlist cards from the editable content data structure with hover effects and external link icons.",
   "frontend/src/components/SocialLinks.tsx": "Social media links section component rendering platform buttons with icons from react-icons, using the editable socialLinks data structure.",
-  "frontend/src/content/channelContent.ts": "Editable frontend data structure containing featured content items and social media links with TypeScript interfaces for type safety.",
+  "frontend/src/content/channelContent.ts": "Editable frontend data structure containing featured content items, social media links, and top 5 most-viewed Shorts with TypeScript interfaces for type safety.",
   "frontend/src/hooks/useQueries.ts": "Minimal hooks file (backend has no methods, all content is frontend-managed).",
   "frontend/src/index.css": "Global styles with warm sunset-inspired OKLCH color palette (coral/terracotta primary, peach secondary, warm neutrals) for both light and dark modes, plus smooth scrolling and enhanced focus states.",
   "frontend/tailwind.config.js": "Extended Tailwind configuration with custom font families, warm-themed shadows, and design tokens matching the sunset color palette.",
-  "frontend/index.html": "HTML entry point with updated title, meta description, and Open Graph tags for SEO and social sharing."
+  "frontend/index.html": "HTML entry point with updated title, meta description, and Open Graph tags for SEO and social sharing.",
+  "frontend/src/components/TopShortsGrid.tsx": "Responsive grid component displaying the top 5 most-viewed Shorts as numbered cards with view counts, hover effects, and external link icons."
 }

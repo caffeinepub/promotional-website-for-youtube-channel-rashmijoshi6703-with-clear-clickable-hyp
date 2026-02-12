@@ -2,32 +2,9 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-a-responsive-single-page-promotional-website-for-the-youtube-channel-handle-rashmijoshi6703-with-clear-calls-to-action-and-prominent-clickable-hyperlinks-to-the-channel",
-      "featureTitle": "Create a responsive, single-page promotional website for the YouTube channel handle @rashmijoshi6703, with clear calls-to-action and prominent clickable hyperlinks to the channel.",
+      "featureId": "feature-add-a-new-content-list-for-the-channel-s-top-5-most-viewed-shorts-five-items-in-the-frontend-content-data-file-so-the-site-owner-can-easily-update-titles-and-links-without-editing-ui-components",
+      "featureTitle": "Add a new content list for the channel’s “Top 5 Most-Viewed Shorts” (five items) in the frontend content data file so the site owner can easily update titles and links without editing UI components.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/ExternalLink.tsx",
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-content-sections-suitable-for-a-youtube-channel-promo-site-hero-channel-name-handle-subscribe-cta-about-featured-content-a-grid-of-video-playlist-link-cards-and-contact-links-section-additional-hyperlinks-the-owner-can-add",
-      "featureTitle": "Add content sections suitable for a YouTube channel promo site: Hero (channel name/handle + subscribe CTA), About, Featured content (a grid of video/playlist link cards), and Contact/Links section (additional hyperlinks the owner can add).",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/FeaturedGrid.tsx",
-        "frontend/src/components/SiteHeader.tsx",
         "frontend/src/content/channelContent.ts"
       ],
       "components": [
@@ -38,17 +15,16 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-2"
+        "REQ-7"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-implement-a-coherent-creative-visual-theme-and-apply-it-consistently-across-typography-spacing-components-and-backgrounds-avoid-default-plain-styling",
-      "featureTitle": "Implement a coherent, creative visual theme and apply it consistently across typography, spacing, components, and backgrounds (avoid default/plain styling).",
+      "featureId": "feature-add-a-new-on-page-section-titled-top-5-most-viewed-shorts-that-renders-the-five-shorts-as-prominent-clickable-cards-links-consistent-with-the-site-s-existing-visual-style",
+      "featureTitle": "Add a new on-page section titled “Top 5 Most-Viewed Shorts” that renders the five Shorts as prominent, clickable cards/links consistent with the site’s existing visual style.",
       "files": [
         "frontend/src/App.tsx",
-        "frontend/src/index.css",
-        "frontend/tailwind.config.js"
+        "frontend/src/components/TopShortsGrid.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -58,34 +34,14 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-3"
+        "REQ-8"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-basic-on-page-seo-and-shareability-enhancements-meaningful-page-title-meta-description-and-an-attractive-hero-headline-subheadline-english",
-      "featureTitle": "Add basic on-page SEO and shareability enhancements: meaningful page title, meta description, and an attractive hero headline/subheadline (English).",
+      "featureId": "feature-update-the-site-header-navigation-to-include-a-shorts-in-page-link-that-scrolls-smoothly-to-the-new-top-5-most-viewed-shorts-section",
+      "featureTitle": "Update the site header navigation to include a “Shorts” in-page link that scrolls smoothly to the new “Top 5 Most-Viewed Shorts” section.",
       "files": [
-        "frontend/index.html",
-        "frontend/src/App.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-a-site-header-with-navigation-links-in-page-anchors-and-a-sticky-or-easily-accessible-subscribe-cta-that-links-to-https-www-youtube-com-rashmijoshi6703",
-      "featureTitle": "Add a site header with navigation links (in-page anchors) and a sticky or easily accessible “Subscribe” CTA that links to https://www.youtube.com/@rashmijoshi6703.",
-      "files": [
-        "frontend/src/App.tsx",
         "frontend/src/components/SiteHeader.tsx"
       ],
       "components": [
@@ -96,26 +52,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-5"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-generated-static-image-assets-hero-banner-and-a-channel-avatar-placeholder-and-render-them-in-the-ui-from-frontend-public-assets-generated-do-not-serve-images-from-the-backend",
-      "featureTitle": "Add generated static image assets (hero/banner and a channel avatar placeholder) and render them in the UI from frontend/public/assets/generated (do not serve images from the backend).",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/SocialLinks.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-6"
+        "REQ-9"
       ],
       "confidence": "high"
     }
